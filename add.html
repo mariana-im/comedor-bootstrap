@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Corazón contento</title>
+        <link href="minimal-table.css" rel="stylesheet" type="text/css">
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo"><strong>Corazón contento</strong></div>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="index.html">Inventario</a></li>
+                    <li><a href="#">Configuración</a></li>
+                    <li><a id="cerrarsesion" href="#">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="mainadd">
+            <div>
+                <h1 class="titulo">Nuevo Producto</h1>
+            </div>
+
+            <hr>
+
+            <div id="contenido"> <!-- seccion entera -->
+                <div id="seccionimagen"> <!-- seccion de imagen-seleccionar archivo -->
+                    <div id="imagepreview"> <!-- seccion de la imagen -->
+                    </div>
+                     <!-- seccion de seleccionar archivo -->
+                    <div class="file-input"> <!-- seleccione archivo -->
+                        <label for="fileInput" class="file-label">Seleccionar imagen</label>
+                        <input type="file" id="fileInput" accept="image/*">
+                    </div>
+                        <!-- <div> 
+                            <button> Buscar </button>
+                        </div> -->
+                </div>
+                <form id="productoForm">
+                    <div id="formulariodatos">
+                        <div>
+                            <label for="idProducto"><h2>ID</h2></label>
+                            <input type="text" id="idProducto" class="entrada" required>
+                        </div>
+                        <div>
+                            <label for="nombreProducto"><h2>Nombre</h2></label>
+                            <input type="text" id="nombreProducto" class="entrada" required>
+                        </div>
+                        <div>
+                            <label for="cantidadProducto"><h2>Cantidad</h2></label>
+                            <input type="number" id="cantidadProducto" class="entrada" min="1" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <hr>
+        </main>
+        <footer>
+            <button type="button" id="cancelar"><a id="cancelarlink" href="index.html">Cancelar</a></button>
+            <button type="submit" id="confirmar" form="productoForm">Confirmar</button>
+        </footer>
+    </body>
+</html>
